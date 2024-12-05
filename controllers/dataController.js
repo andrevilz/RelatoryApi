@@ -6,7 +6,6 @@ const {
     getReportsByUserAndDateRange,
 } = require('../models/dataModel');
 
-// Função para adicionar dados
 const handleAddData = (req, res) => {
     const { name, value, codigoFiscal } = req.body;
 
@@ -32,7 +31,6 @@ const handleAddData = (req, res) => {
     }
 };
 
-// Função para buscar relatórios por intervalo de datas
 const handleGetReportsByDateRange = (req, res) => {
     const { startDate, endDate } = req.query;
 
@@ -49,7 +47,6 @@ const handleGetReportsByDateRange = (req, res) => {
     }
 };
 
-// Função para buscar relatórios por nome de usuário
 const handleGetReportsByUser = (req, res) => {
     const { userName } = req.query;
 
@@ -66,7 +63,6 @@ const handleGetReportsByUser = (req, res) => {
     }
 };
 
-// Função para buscar relatórios por nome de usuário e intervalo de datas
 const handleGetReportsByUserAndDateRange = (req, res) => {
     const { userName, startDate, endDate } = req.query;
 
@@ -84,7 +80,6 @@ const handleGetReportsByUserAndDateRange = (req, res) => {
 };
 
 
-// Função para obter todos os relatórios
 const handleGetAllReports = (req, res) => {
     try {
         const data = getAllReports();
